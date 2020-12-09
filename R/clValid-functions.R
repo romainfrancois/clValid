@@ -3,7 +3,7 @@
 if(getRversion() >= "2.15.1")  globalVariables(c("biocLite"))
 
 
-#' @import gower
+#' @importFrom gower gower.dist
 clValid <- function(obj, nClust, clMethods="hierarchical", validation="stability", maxitems=600,
                     metric="euclidean", method="average", neighbSize=10,
                     annotation=NULL, GOcategory="all", goTermFreq=0.05,
