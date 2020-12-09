@@ -6,7 +6,7 @@ Author: Guy Brock <guy.brock@louisville.edu>, Vasyl Pihur <vpihur@gmail.com>,
 	Susmita Datta <susmita.datta@louisville.edu>, and
   	Somnath Datta <somnath.datta@louisville.edu>
 Maintainer: Vasyl Pihur <vpihur@gmail.com>
-Depends: R (>= 3.0), cluster, gower
+Depends: R (>= 3.0), cluster
 Imports: methods
 Suggests: Biobase, annotate, GO.db, moe430a.db, RankAggreg, kohonen,
         mclust
