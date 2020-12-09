@@ -1,4 +1,5 @@
 importFrom(graphics, plot)
+importFrom(gower, gower.dist)
 importFrom("grDevices", "dev.interactive")
 importFrom("graphics", "axis", "legend", "lines", "matplot", "par")
 importFrom("stats", "as.dist", "cor", "cutree", "dist", "ftable", "hclust", "kmeans", "xtabs")
