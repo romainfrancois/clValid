@@ -22,6 +22,7 @@
 ####################################################################
 
 #' @importFrom gower gower.dist
+
 vClusters <- function(mat,clMethod,nClust,nclustMax, validation,
                       Dist, method, metric, annotation, GOcategory,
                       goTermFreq, neighbSize, dropEvidence, verbose, ... ) {
@@ -32,7 +33,8 @@ vClusters <- function(mat,clMethod,nClust,nclustMax, validation,
   measures <- matrix(0,nrow=length(measNames),ncol=length(nClust))
   rownames(measures) <- measNames
   colnames(measures) <- nClust
-
+  install.packages("gower")
+  library(gower)
   switch(clMethod,
          hierarchical = {
            clusterObj <- hclust(Dist,method)
@@ -93,7 +95,7 @@ vClusters <- function(mat,clMethod,nClust,nclustMax, validation,
       co.del <- 0 ## for use in verbose printing of progress
       for (del in 1:ncol(mat)) {
         matDel <- mat[,-del]               ## matDel <- as.matrix(matDel)
-        DistDel <- as.dist(gower:::gower.dist(matDel))
+        DistDel <- as.dist(gower.dist(matDel))
         switch(clMethod,
                hierarchical = clusterObjDel <- hclust(DistDel,method),
                kmeans = clusterObjInitDel <- hclust(DistDel,method),
