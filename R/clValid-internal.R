@@ -93,7 +93,7 @@ vClusters <- function(mat,clMethod,nClust,nclustMax, validation,
       co.del <- 0 ## for use in verbose printing of progress
       for (del in 1:ncol(mat)) {
         matDel <- mat[,-del]               ## matDel <- as.matrix(matDel)
-        DistDel <- as.dist(gower::gower.dist(matDel))
+        DistDel <- as.dist(gower:::gower.dist(matDel))
         switch(clMethod,
                hierarchical = clusterObjDel <- hclust(DistDel,method),
                kmeans = clusterObjInitDel <- hclust(DistDel,method),
