@@ -7,7 +7,7 @@ Author: Guy Brock <guy.brock@louisville.edu>, Vasyl Pihur <vpihur@gmail.com>,
   	Somnath Datta <somnath.datta@louisville.edu>
 Maintainer: Vasyl Pihur <vpihur@gmail.com>
 Depends: R (>= 3.0), cluster, gower
-Imports: methods, class, gower
+Imports: methods
 Suggests: Biobase, annotate, GO.db, moe430a.db, RankAggreg, kohonen,
         mclust
 Description: Statistical and biological validation of clustering results. This package implements Dunn Index, Silhouette, Connectivity, Stability, BHI and BSI. Further information can be found in Brock, G et al. (2008) <doi: 10.18637/jss.v025.i04>.
@@ -16,5 +16,5 @@ Collate: clValid-Classes.R clValid-Methods.R clValid-internal.R
         clValid-functions.R
 NeedsCompilation: no
 Repository: CRAN
-Packaged: 2020-07-14 04:16:51 UTC; vpihur
+Packaged: 2020-12-08 18:31:23 UTC; biagio
 Date/Publication: 2020-07-14 09:10:13 UTC
