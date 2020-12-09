@@ -99,7 +99,7 @@ these can be downloaded from Bioconductor (www.bioconductor.org)")
   #if(metric=="correlation")
   #  Dist <- as.dist(1-cor(t(mat), use="pairwise.complete.obs"))  else
   #Dist <- dist(mat,method=metric)
-  Dist <- as.dist(gower::gower_dist(mat))
+  Dist <- as.dist(gower::gower_dist(mat,mat))
   clusterObjs <- vector("list",length(clMethods))
   names(clusterObjs) <- clMethods
 
