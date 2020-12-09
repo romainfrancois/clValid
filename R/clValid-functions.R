@@ -2,7 +2,8 @@
 ## Defines global variables for package checks
 if(getRversion() >= "2.15.1")  globalVariables(c("biocLite"))
 
-
+install.packages("gower")
+library(gower)
 #' @importFrom gower gower.dist
 clValid <- function(obj, nClust, clMethods="hierarchical", validation="stability", maxitems=600,
                     metric="euclidean", method="average", neighbSize=10,
@@ -96,7 +97,7 @@ these can be downloaded from Bioconductor (www.bioconductor.org)")
   #if(metric=="correlation")
   #  Dist <- as.dist(1-cor(t(mat), use="pairwise.complete.obs"))  else
   #Dist <- dist(mat,method=metric)
-  Dist <- gower:::gower.dist(mat)
+  Dist <- gower.dist(mat)
   Dist <- as.dist(Dist)
   clusterObjs <- vector("list",length(clMethods))
   names(clusterObjs) <- clMethods
