@@ -7,10 +7,6 @@ clValid <- function(obj, nClust, clMethods="hierarchical", validation="stability
                     metric="euclidean", method="average", neighbSize=10,
                     annotation=NULL, GOcategory="all", goTermFreq=0.05,
                     dropEvidence=NULL, verbose=FALSE, ...) {
-  install.packages("gower")
-library(gower)
-
-
 
   clMethods <- tolower(clMethods)
   clMethods <- match.arg(clMethods,c("hierarchical","kmeans","diana","fanny","som","model","sota","pam","clara","agnes"), several.ok=TRUE)
