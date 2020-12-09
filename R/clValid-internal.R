@@ -21,7 +21,7 @@
 ## measures - validation measures
 ####################################################################
 
-#' @import gower
+#' @importFrom gower gower.dist
 vClusters <- function(mat,clMethod,nClust,nclustMax, validation,
                       Dist, method, metric, annotation, GOcategory,
                       goTermFreq, neighbSize, dropEvidence, verbose, ... ) {
